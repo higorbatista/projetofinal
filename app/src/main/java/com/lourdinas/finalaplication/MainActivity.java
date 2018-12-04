@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity
 
         int id = menuItem.getItemId();
 
+
         if (id == R.id.configuracao) {
             Intent intent = new Intent(MainActivity.this, configuracao.class);
             startActivity(intent);
@@ -94,8 +95,14 @@ public class MainActivity extends AppCompatActivity
 
             Toast.makeText(getApplicationContext(),
                     "Abrir chamada", Toast.LENGTH_SHORT).show();
-        }
+        }else if (id == R.id.perfil) {
+            Intent intent = new Intent(MainActivity.this, Perfil.class);
+            startActivity(intent);
 
+            Toast.makeText(getApplicationContext(),
+                    "Abrir Perfil", Toast.LENGTH_SHORT).show();
+
+        }
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

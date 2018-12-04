@@ -15,6 +15,8 @@ public class Perfil extends AppCompatActivity {
         setContentView(R.layout.activity_perfil);
 
         final EditText idade = findViewById(R.id.edt_i);
+        final  EditText sexo = findViewById(R.id.edt_sexo);
+        final  EditText nome = findViewById(R.id.edt_n);
         Button sair = findViewById(R.id.bnt_sair);
         Button cadastrar = findViewById(R.id.bnt_cadastrar);
 
@@ -26,6 +28,8 @@ public class Perfil extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Perfil.this, MainActivity.class);
                 intent.putExtra("idade", idade.getText().toString());
+                intent.putExtra("nome", nome.getText().toString());
+                intent.putExtra("sexo", sexo.getText().toString());
                 startActivity(intent);
                 finish();
             }
