@@ -69,6 +69,9 @@ public class MainActivity extends AppCompatActivity
         int id = menuItem.getItemId();
 
         if (id == R.id.configuracao) {
+            Intent intent = new Intent(MainActivity.this, configuracao.class);
+            startActivity(intent);
+
             Toast.makeText(getApplicationContext(),
                     "Abrir configurações", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.calcularMedia) {
